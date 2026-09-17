@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub PR Preview Edit",
+  "version": "0.1.0",
+  "description": "PR 본문을 렌더된 화면에서 직접 고치면, 고친 블록만 마크다운으로 되돌려 textarea에 반영합니다.",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["dist/content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

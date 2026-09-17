@@ -1,0 +1,21 @@
+{
+  "name": "gh-preview-edit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "GitHub PR 본문을 프리뷰 화면에서 직접 고치면 마크다운으로 되돌려 주는 크롬 확장",
+  "scripts": {
+    "build": "esbuild src/content.js --bundle --format=iife --outfile=dist/content.js",
+    "watch": "esbuild src/content.js --bundle --format=iife --outfile=dist/content.js --watch",
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "turndown": "^7.2.0",
+    "turndown-plugin-gfm": "^1.0.2"
+  },
+  "type": "module"
+}
